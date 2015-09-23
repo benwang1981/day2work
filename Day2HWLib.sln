@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2HWLib", "Day2HWLib\Day2HWLib.csproj", "{A1796569-43BF-4D82-B4FF-BF2FB0E0B945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotterShoppingCart.Tests", "PotterShoppingCart.Tests\PotterShoppingCart.Tests.csproj", "{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A1796569-43BF-4D82-B4FF-BF2FB0E0B945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1796569-43BF-4D82-B4FF-BF2FB0E0B945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1796569-43BF-4D82-B4FF-BF2FB0E0B945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4ABE74-E62D-42A2-A753-08A8C35A36F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
