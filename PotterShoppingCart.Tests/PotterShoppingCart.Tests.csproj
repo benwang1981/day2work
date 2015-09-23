@@ -59,6 +59,12 @@
   <ItemGroup>
     <Content Include="User Story.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day2HWLib\Day2HWLib.csproj">
+      <Project>{A1796569-43BF-4D82-B4FF-BF2FB0E0B945}</Project>
+      <Name>Day2HWLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
