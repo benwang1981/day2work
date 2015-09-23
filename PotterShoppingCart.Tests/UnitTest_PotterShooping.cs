@@ -18,9 +18,9 @@ namespace PotterShoppingCart.Tests
             };
 
             //act
-            var target = new PotterShoppingCart();
+            var target = new ShoppingCart();
             decimal expected = 100m;
-            decimal actual =  PotterShoppingCart.Calculate(books);
+            decimal actual = target.Calculate(books);
             //assert
             Assert.AreEqual(expected, actual);
         }
