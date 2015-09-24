@@ -10,9 +10,29 @@ namespace Day2HWLib
         public decimal Calculate(List<Book> books)
         {
             decimal amount = 0;
-            decimal discount = GetDiscount(books.GroupBy(book => book.Num).Count());
+            var bookGroup = from book in books
+                group book by book.Num
+                into gp
+                select new
+                {
+                    Num = gp.Key,
+                    Count = gp.Count(),
+                    Price = gp.First().Price
+                };
 
-            amount = books.Sum(book => book.Price * discount);
+            var bookGroupList = bookGroup.ToList();
+            var sumCount = 0;
+
+            while (bookGroupList.Any(bg => bg.Count - sumCount > 0))
+            {
+                var matchedGroup = bookGroupList.FindAll(bg => bg.Count - sumCount > 0).ToList();
+                int numCount = matchedGroup.Count();
+                int minCount = matchedGroup.Min(item => item.Count - sumCount);
+
+                decimal discount = GetDiscount(numCount);
+                amount += matchedGroup.Sum(book => book.Price * minCount * discount);
+                sumCount += minCount;
+            }
 
             return amount;
         }

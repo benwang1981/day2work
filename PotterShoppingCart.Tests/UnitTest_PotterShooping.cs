@@ -117,7 +117,7 @@ namespace PotterShoppingCart.Tests
 
             //act
             var target = new ShoppingCart();
-            decimal expected = 270;
+            decimal expected = 370;
             decimal actual = target.Calculate(books);
             //assert
             Assert.AreEqual(expected, actual);
