@@ -10,11 +10,28 @@ namespace Day2HWLib
         public decimal Calculate(List<Book> books)
         {
             decimal amount = 0;
-            decimal discount = 1;
+            decimal discount = GetDiscount(books.GroupBy(book => book.Num).Count());
 
-            amount = books.Sum(book => book.Price*discount);
+            amount = books.Sum(book => book.Price * discount);
 
             return amount;
+        }
+
+        private decimal GetDiscount(int numCount)
+        {
+            decimal discount = 1;
+
+            switch (numCount)
+            {
+                case 1:
+                    discount = 1;
+                    break;
+                case 2:
+                    discount = 0.95m;
+                    break;
+            }
+
+            return discount;
         }
     }
 }
