@@ -35,6 +35,9 @@ namespace Day2HWLib
                 case 4:
                     discount = 0.8m;
                     break;
+                case 5:
+                    discount = 0.75m;
+                    break;
             }
 
             return discount;
