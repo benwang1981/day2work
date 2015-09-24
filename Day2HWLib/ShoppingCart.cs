@@ -9,7 +9,12 @@ namespace Day2HWLib
     {
         public decimal Calculate(List<Book> books)
         {
-            throw new NotImplementedException();
+            decimal amount = 0;
+            decimal discount = 1;
+
+            amount = books.Sum(book => book.Price*discount);
+
+            return amount;
         }
     }
 }
